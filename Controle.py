@@ -12,10 +12,19 @@ while True:
                 print('Rádio ligado')
     else:
         while True:
+            print('''Pressione:
+l para ligar ou desligar
++ para aumentar o volume
+- para diminuir o volume
+p para executar a música
+s para parar a música
+> para avançar para a próxima música
+< para voltar para a música anterior''')
             f = input('Funções: ')
             if f == 'l':  # liga/desliga
                 if radio_status == True:
                     radio_status = False
+                    pygame.mixer.music.stop()
                     print('Rádio desligado2')
                     break
                 else:
